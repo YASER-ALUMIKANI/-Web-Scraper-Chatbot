@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">Quantum Leap Institute Logo</title>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="url(#gradient)" />
+  <path d="M36 84c12 4 24-6 24-18s-12-22-24-18l12-12 18 6 18-18 0 48-48 12z" fill="#ffffff" fill-opacity="0.9" />
+  <circle cx="84" cy="36" r="10" fill="#f8fafc" />
+</svg>

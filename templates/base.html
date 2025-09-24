@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page_title or 'Quantum Leap Institute | AI & Data Science Courses' }}</title>
+    <meta name="description" content="{{ page_description or 'Hands-on AI and Data Science bootcamps designed to help professionals upskill with real-world projects.' }}" />
+    <meta name="keywords" content="AI courses, Data Science bootcamp, machine learning training, analytics cohort" />
+    <link rel="canonical" href="{{ request.base_url }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
+    <link rel="preload" as="image" href="{{ url_for('static', filename='img/hero.jpg') }}" imagesrcset="{{ url_for('static', filename='img/hero.jpg') }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.url }}" />
+    <meta property="og:title" content="{{ page_title or 'Quantum Leap Institute | AI & Data Science Courses' }}" />
+    <meta property="og:description" content="{{ page_description or 'Hands-on AI and Data Science bootcamps designed to help professionals upskill with real-world projects.' }}" />
+    <meta property="og:image" content="{{ url_for('static', filename='img/banner-ai.jpg') }}" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page_title or 'Quantum Leap Institute | AI & Data Science Courses' }}" />
+    <meta name="twitter:description" content="{{ page_description or 'Hands-on AI and Data Science bootcamps designed to help professionals upskill with real-world projects.' }}" />
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/banner-ds.jpg') }}" />
+
+    <meta name="theme-color" content="#0f172a" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Quantum Leap Institute",
+        "url": "{{ request.url_root.rstrip('/') }}",
+        "logo": "{{ url_for('static', filename='img/logo.svg', _external=True) }}",
+        "sameAs": [
+          "https://www.linkedin.com/company/quantumleapinstitute",
+          "https://twitter.com/qlinst"
+        ],
+        "offers": {
+          "@type": "OfferCatalog",
+          "name": "AI & Data Science Courses",
+          "itemListElement": [
+            {
+              "@type": "Course",
+              "name": "AI Foundations",
+              "description": "Comprehensive introduction to machine learning, neural networks, and prompt engineering with hands-on labs.",
+              "provider": {
+                "@type": "Organization",
+                "name": "Quantum Leap Institute",
+                "sameAs": "{{ request.url_root.rstrip('/') }}"
+              }
+            },
+            {
+              "@type": "Course",
+              "name": "Data Science Pro",
+              "description": "Advanced analytics program covering statistics, feature engineering, MLOps, and production deployment.",
+              "provider": {
+                "@type": "Organization",
+                "name": "Quantum Leap Institute",
+                "sameAs": "{{ request.url_root.rstrip('/') }}"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+    {% block head_extra %}{% endblock %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include 'partials/navbar.html' %}
+    <main id="main-content" tabindex="-1">
+      {% block content %}{% endblock %}
+    </main>
+    {% include 'partials/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

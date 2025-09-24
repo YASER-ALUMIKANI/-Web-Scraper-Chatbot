@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head_extra %}
+  <meta property="og:image:alt" content="AI students collaborating" />
+  <meta name="robots" content="index,follow" />
+{% endblock %}
+
+{% block content %}
+  <section class="page-hero" aria-labelledby="gallery-heading">
+    <h1 id="gallery-heading">Inside the Quantum Leap learning experience</h1>
+    <p>Explore hands-on sessions, demo day presentations, and project milestones from recent AI and Data Science cohorts.</p>
+  </section>
+
+  <section class="gallery" aria-label="Course gallery">
+    <div class="gallery__grid">
+      {% set images = [
+        {
+          'src': url_for('static', filename='img/course-1.jpg'),
+          'alt': 'Students presenting an AI project dashboard'
+        },
+        {
+          'src': url_for('static', filename='img/course-2.jpg'),
+          'alt': 'Mentor guiding learner through model deployment'
+        },
+        {
+          'src': url_for('static', filename='img/course-3.jpg'),
+          'alt': 'Cohort collaborating on data analysis sprint'
+        },
+        {
+          'src': url_for('static', filename='img/banner-ai.jpg'),
+          'alt': 'AI Foundations cohort working with whiteboards'
+        },
+        {
+          'src': url_for('static', filename='img/banner-ds.jpg'),
+          'alt': 'Data Science Pro cohort celebrating project launch'
+        },
+        {
+          'src': url_for('static', filename='img/hero.jpg'),
+          'alt': 'Learners building generative AI application on laptops'
+        }
+      ] %}
+      {% for image in images %}
+        <figure class="gallery__item">
+          <button type="button" class="gallery__trigger" data-lightbox="open" data-image-src="{{ image.src }}" data-image-alt="{{ image.alt }}">
+            <img src="{{ image.src }}" alt="{{ image.alt }}" width="320" height="240" loading="lazy" />
+            <figcaption>{{ image.alt }}</figcaption>
+          </button>
+        </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox__backdrop" data-lightbox="close"></div>
+    <div class="lightbox__content" role="document">
+      <button type="button" class="lightbox__close" data-lightbox="close" aria-label="Close gallery overlay">&times;</button>
+      <img src="" alt="" class="lightbox__image" width="960" height="640" />
+      <p class="lightbox__caption"></p>
+    </div>
+  </div>
+{% endblock %}

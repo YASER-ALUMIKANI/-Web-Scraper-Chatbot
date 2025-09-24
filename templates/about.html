@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block head_extra %}
+  <meta property="og:image:alt" content="Instructors presenting AI coursework" />
+{% endblock %}
+
+{% block content %}
+  <section class="page-hero" aria-labelledby="about-heading">
+    <h1 id="about-heading">Meet the team behind Quantum Leap Institute</h1>
+    <p>We are senior practitioners, researchers, and educators dedicated to building ethical, production-ready AI talent.</p>
+  </section>
+
+  <section class="instructors" aria-labelledby="instructors-heading">
+    <div class="section-heading">
+      <h2 id="instructors-heading">Instructor leadership</h2>
+      <p>Every mentor averages 12+ years deploying AI systems in high-impact environments.</p>
+    </div>
+    <div class="instructors__grid">
+      <article class="card instructor-card">
+        <img src="{{ url_for('static', filename='img/course-1.jpg') }}" alt="Portrait of Dr. Leila Hart" width="320" height="240" loading="lazy" />
+        <h3>Dr. Leila Hart</h3>
+        <p>Former head of ML research at a Fortune 100 company, specializing in explainable AI and enterprise adoption strategy.</p>
+        <span class="badge">PhD, MIT</span>
+      </article>
+      <article class="card instructor-card">
+        <img src="{{ url_for('static', filename='img/course-2.jpg') }}" alt="Portrait of Marcus Chen" width="320" height="240" loading="lazy" />
+        <h3>Marcus Chen</h3>
+        <p>Led data teams at high-growth startups, with expertise in experimentation platforms, analytics engineering, and MLOps.</p>
+        <span class="badge">Ex-Airbnb</span>
+      </article>
+      <article class="card instructor-card">
+        <img src="{{ url_for('static', filename='img/course-3.jpg') }}" alt="Portrait of Sofia Alvarez" width="320" height="240" loading="lazy" />
+        <h3>Sofia Alvarez</h3>
+        <p>Product leader for applied GenAI, focusing on human-centered design and responsible AI governance frameworks.</p>
+        <span class="badge">Stanford MS</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="philosophy" aria-labelledby="philosophy-heading">
+    <div class="philosophy__content">
+      <h2 id="philosophy-heading">Teaching philosophy</h2>
+      <p>We believe meaningful AI education blends rigorous theory with continuous application. Learners build, ship, and iterate on projects that simulate real-world production stakes. Every cohort prioritizes collaborative learning, ethical decision-making, and measurable ROI for both professionals and their organizations.</p>
+      <ul>
+        <li>Weekly live clinics anchored by practitioner case studies.</li>
+        <li>Actionable feedback loops and 1:1 mentorship checkpoints.</li>
+        <li>Embedded responsible AI frameworks and compliance guidance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-heading">
+    <div class="section-heading">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <p>Have more questions? Our admissions team is ready to help.</p>
+    </div>
+    <div class="faq__items" role="region" aria-live="polite">
+      <article class="faq__item" data-accordion>
+        <button type="button" aria-expanded="false">Do I need prior coding experience?</button>
+        <div class="faq__content" hidden>
+          <p>Our AI Foundations course is designed for learners with basic Python familiarity. Prep modules are included so you can ramp up quickly.</p>
+        </div>
+      </article>
+      <article class="faq__item" data-accordion>
+        <button type="button" aria-expanded="false">How much time should I allocate each week?</button>
+        <div class="faq__content" hidden>
+          <p>Expect to dedicate 8–12 hours weekly for live sessions, async assignments, and mentor feedback loops. Self-paced learners can adjust pacing.</p>
+        </div>
+      </article>
+      <article class="faq__item" data-accordion>
+        <button type="button" aria-expanded="false">Is the program accredited?</button>
+        <div class="faq__content" hidden>
+          <p>Quantum Leap Institute is an approved continuing education provider with partnerships across global universities and enterprise innovation labs.</p>
+        </div>
+      </article>
+      <article class="faq__item" data-accordion>
+        <button type="button" aria-expanded="false">Will you help with job placement?</button>
+        <div class="faq__content" hidden>
+          <p>Yes. Our career accelerator includes interview prep, portfolio showcases, and direct introductions to hiring partners in AI and analytics.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="partners" aria-labelledby="partners-heading">
+    <div class="section-heading">
+      <h2 id="partners-heading">Accreditation &amp; partners</h2>
+      <p>Trusted collaboration with academic and industry leaders.</p>
+    </div>
+    <div class="partners__logos">
+      <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Accredited by Global AI Council" width="120" height="40" loading="lazy" />
+      <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Partnered with DataOps Collective" width="120" height="40" loading="lazy" />
+      <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Member of Responsible AI Alliance" width="120" height="40" loading="lazy" />
+    </div>
+  </section>
+{% endblock %}

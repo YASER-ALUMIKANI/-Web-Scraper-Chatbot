@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block head_extra %}
+  <meta property="og:image:alt" content="Students collaborating on AI coursework" />
+{% endblock %}
+
+{% block content %}
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero__content">
+      <h1 id="hero-heading">Build AI solutions that ship — with expert mentors by your side</h1>
+      <p>Master practical machine learning, prompt engineering, and data pipelines through immersive cohorts built for working professionals.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#syllabus">Download Syllabus</a>
+        <a class="btn btn--secondary" href="#upcoming">View Upcoming Dates</a>
+      </div>
+      <ul class="hero__trust">
+        <li class="badge">Trusted by 5,000+ alumni</li>
+        <li class="badge">Project-based assessments</li>
+        <li class="badge">Career coaching included</li>
+      </ul>
+    </div>
+    <div class="hero__media">
+      <img src="{{ url_for('static', filename='img/hero.jpg') }}" alt="Learners collaborating on data science projects" width="640" height="480" loading="eager" />
+    </div>
+  </section>
+
+  <section class="highlights" aria-label="Course highlights">
+    <div class="highlight-card">
+      <h2>Outcomes-first curriculum</h2>
+      <p>Deploy production-grade models and dashboards in just 12 weeks with guidance from practitioners at top AI labs.</p>
+    </div>
+    <div class="highlight-card">
+      <h2>Multiple learning paths</h2>
+      <p>Choose from bootcamps, live cohorts, or self-paced sprints with weekly mentor support and accountability pods.</p>
+    </div>
+    <div class="highlight-card">
+      <h2>Career acceleration</h2>
+      <p>Interview preparation, portfolio reviews, and curated hiring networks help you land roles in applied AI and analytics.</p>
+    </div>
+  </section>
+
+  {% include 'partials/banner.html' with
+    banner_title='AI Foundations: From Zero to Project',
+    banner_subtitle='Launch your AI journey with guided labs in Python, model deployment drills, and responsible AI playbooks.',
+    banner_img=url_for('static', filename='img/banner-ai.jpg'),
+    cta_label='Enroll Now',
+    cta_href='#contact',
+    badge_text='Beginner Friendly'
+  %}
+
+  <section class="curriculum" id="syllabus" aria-labelledby="curriculum-heading" tabindex="-1">
+    <div class="section-heading">
+      <h2 id="curriculum-heading">What you&apos;ll learn</h2>
+      <p>Graduate with a portfolio that demonstrates end-to-end proficiency across the modern AI lifecycle.</p>
+    </div>
+    <div class="curriculum__grid">
+      <article class="card">
+        <h3>Machine Learning Essentials</h3>
+        <p>Predictive modeling, feature engineering, and experimentation workflows anchored in reproducibility.</p>
+        <span class="badge">Weeks 1-3</span>
+      </article>
+      <article class="card">
+        <h3>Deep Learning &amp; GenAI</h3>
+        <p>Neural architectures, transformer fine-tuning, vector search, and prompt chaining for production-ready apps.</p>
+        <span class="badge">Weeks 4-6</span>
+      </article>
+      <article class="card">
+        <h3>Data Pipelines &amp; Analytics</h3>
+        <p>SQL and Python data engineering, orchestration best practices, dashboard design, and insight storytelling.</p>
+        <span class="badge">Weeks 7-9</span>
+      </article>
+      <article class="card">
+        <h3>MLOps &amp; Deployment</h3>
+        <p>CI/CD for ML, automated monitoring, responsible AI guardrails, and stakeholder handoffs.</p>
+        <span class="badge">Weeks 10-12</span>
+      </article>
+    </div>
+  </section>
+
+  {% include 'partials/banner.html' with
+    banner_title='Data Science Pro: From Data to Deployment',
+    banner_subtitle='Advanced training for analysts and engineers to master statistical modeling, experimentation, and MLOps orchestration.',
+    banner_img=url_for('static', filename='img/banner-ds.jpg'),
+    cta_label='Download Syllabus',
+    cta_href='#syllabus',
+    badge_text='Advanced Cohort'
+  %}
+
+  <section class="testimonials" aria-labelledby="testimonials-heading">
+    <div class="section-heading">
+      <h2 id="testimonials-heading">What graduates say</h2>
+      <p>Alumni thrive at fast-growing startups and enterprise innovation teams alike.</p>
+    </div>
+    <div class="testimonials__grid">
+      <figure class="card">
+        <blockquote>
+          “This program gave me the confidence to lead our company’s first generative AI initiative. The mentorship was unmatched.”
+        </blockquote>
+        <figcaption>— Priya N., Lead Machine Learning Engineer</figcaption>
+      </figure>
+      <figure class="card">
+        <blockquote>
+          “I shipped a computer vision pipeline in production within two months of graduating. The capstone prepared me for real-world constraints.”
+        </blockquote>
+        <figcaption>— Alex W., Computer Vision Specialist</figcaption>
+      </figure>
+      <figure class="card">
+        <blockquote>
+          “The accountability pods kept me on track while working full time. I landed a data scientist role immediately after completing the bootcamp.”
+        </blockquote>
+        <figcaption>— Maria L., Data Scientist</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="upcoming" id="upcoming" aria-labelledby="upcoming-heading" tabindex="-1">
+    <div class="section-heading">
+      <h2 id="upcoming-heading">Upcoming cohorts</h2>
+      <p>Reserve your seat early — spaces are capped to maintain a 1:6 mentor ratio.</p>
+    </div>
+    <div class="upcoming__list">
+      <article class="card">
+        <h3>AI Foundations — Evening Cohort</h3>
+        <p><strong>Start:</strong> July 8, 2024 &middot; <strong>Live sessions:</strong> Mon &amp; Wed</p>
+        <a class="btn btn--ghost" href="#contact">Join Waitlist</a>
+      </article>
+      <article class="card">
+        <h3>Data Science Pro — Weekend Cohort</h3>
+        <p><strong>Start:</strong> August 17, 2024 &middot; <strong>Live sessions:</strong> Sat</p>
+        <a class="btn btn--ghost" href="#contact">Reserve Spot</a>
+      </article>
+      <article class="card">
+        <h3>Applied GenAI Sprint — Self-Paced</h3>
+        <p><strong>Start:</strong> On demand &middot; <strong>Mentor calls:</strong> Weekly</p>
+        <a class="btn btn--ghost" href="#contact">Enroll Now</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-labelledby="cta-heading" tabindex="-1">
+    <div class="cta__content">
+      <h2 id="cta-heading">Ready to design the future of intelligent products?</h2>
+      <p>Chat with our admissions advisors to map your personalized learning plan and receive the full syllabus.</p>
+    </div>
+    <div class="cta__actions">
+      <a class="btn btn--primary" href="mailto:admissions@qlinst.ai">Contact Us</a>
+      <a class="btn btn--secondary" href="#syllabus">Download Syllabus</a>
+    </div>
+  </section>
+{% endblock %}
