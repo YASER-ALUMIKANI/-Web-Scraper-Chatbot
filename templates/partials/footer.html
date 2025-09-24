@@ -1,0 +1,27 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="footer__content">
+    <div class="footer__brand">
+      <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Quantum Leap Institute logo" width="36" height="36" />
+      <p>Quantum Leap Institute — accelerating careers in AI &amp; Data Science.</p>
+    </div>
+    <div class="footer__links">
+      <h2 class="footer__heading">Quick links</h2>
+      <ul>
+        <li><a href="#syllabus">Download Syllabus</a></li>
+        <li><a href="{{ url_for('about') }}">Meet the Instructors</a></li>
+        <li><a href="{{ url_for('gallery') }}">Student Projects</a></li>
+      </ul>
+    </div>
+    <div class="footer__social">
+      <h2 class="footer__heading">Connect</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://twitter.com" aria-label="Twitter">Twitter</a></li>
+        <li><a href="mailto:hello@qlinst.ai" aria-label="Email">hello@qlinst.ai</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__meta">
+    <small>&copy; {{ current_year }} Quantum Leap Institute. All rights reserved.</small>
+  </div>
+</footer>

@@ -1,0 +1,14 @@
+<section class="banner" style="--banner-image: url('{{ banner_img }}');" aria-labelledby="banner-{{ banner_title|replace(' ', '-')|lower }}">
+  <div class="banner__overlay"></div>
+  <div class="banner__content">
+    {% if badge_text %}
+      <span class="badge banner__badge">{{ badge_text }}</span>
+    {% endif %}
+    <h2 id="banner-{{ banner_title|replace(' ', '-')|lower }}">{{ banner_title }}</h2>
+    <p>{{ banner_subtitle }}</p>
+    <a class="btn btn--primary" href="{{ cta_href }}">{{ cta_label }}</a>
+  </div>
+  <div class="banner__media" role="presentation" aria-hidden="true">
+    <img src="{{ banner_img }}" alt="" loading="lazy" width="640" height="360" />
+  </div>
+</section>

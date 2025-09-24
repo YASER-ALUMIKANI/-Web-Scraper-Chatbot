@@ -1,0 +1,22 @@
+<header class="site-header" role="banner">
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="navbar__brand">
+      <a href="{{ url_for('index') }}" class="navbar__logo" aria-label="Quantum Leap Institute home">
+        <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Quantum Leap Institute logo" width="40" height="40" />
+        <span class="navbar__title">Quantum Leap Institute</span>
+      </a>
+    </div>
+    <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+      <span class="navbar__toggle-line" aria-hidden="true"></span>
+      <span class="navbar__toggle-line" aria-hidden="true"></span>
+      <span class="navbar__toggle-line" aria-hidden="true"></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <div class="navbar__links" id="primary-menu" role="menubar" aria-expanded="false">
+      <a role="menuitem" href="{{ url_for('index') }}">Home</a>
+      <a role="menuitem" href="{{ url_for('about') }}">About</a>
+      <a role="menuitem" href="{{ url_for('gallery') }}">Gallery</a>
+      <a role="menuitem" class="btn btn--ghost" href="#contact">Contact Us</a>
+    </div>
+  </nav>
+</header>
